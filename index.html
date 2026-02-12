@@ -4,31 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .region { margin: 20px; }
+        .article { margin: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .hover-preview { display: none; position: absolute; border: 1px solid #ccc; padding: 10px; background: #fff; z-index: 100; }
+        .article:hover .hover-preview { display: block; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Explore the World</h1>
-    </header>
-    <main>
-        <section id="destinations">
-            <h2>Popular Destinations</h2>
-            <ul>
-                <li>
-                    <h3>Europe</h3>
-                    <img src="europe.jpg" alt="Europe" onclick="showInfo('Europe')">
-                </li>
-                <li>
-                    <h3>Asia</h3>
-                    <img src="asia.jpg" alt="Asia" onclick="showInfo('Asia')">
-                </li>
-                <!-- More regions -->
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>© 2026 Travel Website</p>
-    </footer>
+    <h1>Travel Destinations</h1>
+    <div class="region">
+        <h2>China</h2>
+        <div class="city">
+            <h3>Sichuan</h3>
+            <div class="article">
+                <h4>Chengdu</h4>
+                <img src="link_to_chengdu_image.jpg" alt="Chengdu Image" style="width:100px;"> 
+                <p>Click to learn more about Chengdu.</p>
+                <div class="hover-preview">
+                    <img src="link_to_chengdu_hover_image.jpg" alt="Hover Preview" style="width:300px;">
+                    <p>Chengdu is famous for its hot pot and pandas!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="region">
+        <h2>Japan</h2>
+        <div class="city">
+            <h3>Tokyo</h3>
+            <div class="article">
+                <h4>Shibuya</h4>
+                <img src="link_to_tokyo_image.jpg" alt="Tokyo Image" style="width:100px;">
+                <p>Click to learn more about Shibuya.</p>
+                <div class="hover-preview">
+                    <img src="link_to_tokyo_hover_image.jpg" alt="Hover Preview" style="width:300px;">
+                    <p>Shibuya is famous for its bustling crossing and shopping!</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
